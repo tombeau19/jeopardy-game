@@ -224,4 +224,114 @@ $(document).ready(function () {
         }
     });
 
+//SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
+
+    const skiingQuestions = [
+        {
+            question: 'Most World Cup wins for an American',
+            answer: 'Lindsay Vonn',
+            choices: 'Lindsay Vonn, Picaboo Street, or Mikaela Shiffrin',
+            points: 300,
+        },
+        {
+            question: 'Most World Cup wins for an American man',
+            answer: 'Bode Miller',
+            choices: 'Ted Ligety, Bode Miller, or Phil Mahre',
+            points: 200,
+        },
+        {
+            question: 'If you french fry when youre supposed to pizza you are gonna have a __________',
+            answer: 'Bad Time',
+            choices: 'Bad Time, Good Time, or Okay Time',
+            points: 100,
+        },
+        {
+            question: 'First champion of the inaugural extreme skiing championships',
+            answer: 'Doug Coombs',
+            choices: 'Jonny Mosely, Shane McConkey, or Doug Coombs',
+            points: 400,
+        },
+        {
+            question: 'Inventor of the game GNAR',
+            answer: 'Shane McConkey',
+            choices: 'Shane McConkey, Jonny Mosely, or Doug Coombs',
+            points: 500,
+        }
+    ]
+
+    $('.skiingHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(skiingQuestions[2].question, `Type ${skiingQuestions[2].choices}`);
+        if (y === skiingQuestions[2].answer) {
+            alert('Correct!');
+            score += skiingQuestions[2].points;
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect');
+            score -= skiingQuestions[2].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.skiingTwoHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(skiingQuestions[1].question, `Type ${skiingQuestions[1].choices}`);
+        if (y === skiingQuestions[1].answer) {
+            alert('Correct!')
+            score += skiingQuestions[1].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= skiingQuestions[1].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.skiingThreeHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(skiingQuestions[0].question, `Type ${skiingQuestions[0].choices}`);
+        if (y === skiingQuestions[0].answer) {
+            alert('Correct!')
+            score += skiingQuestions[0].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= skiingQuestions[0].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.skiingFourHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(skiingQuestions[3].question, `Type ${skiingQuestions[3].choices}`);
+        if (y === skiingQuestions[3].answer) {
+            alert('Correct!')
+            score += skiingQuestions[3].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= skiingQuestions[3].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.skiingFiveHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(skiingQuestions[4].question, `Type ${skiingQuestions[4].choices}`);
+        if (y === skiingQuestions[4].answer) {
+            alert('Correct!')
+            score += skiingQuestions[4].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= skiingQuestions[4].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
 });
