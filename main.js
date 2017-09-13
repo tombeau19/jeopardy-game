@@ -6,6 +6,8 @@ $(document).ready(function () {
 
     let score = 0;
 
+    //BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL
+
     const baseballQuestions = [
         {
             question: 'This team plays at Fenway Park',
@@ -330,6 +332,116 @@ $(document).ready(function () {
         else {
             alert('Incorrect')
             score -= skiingQuestions[4].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    //HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY
+
+    const hockeyQuestions = [
+        {
+            question: 'The Great One',
+            answer: 'Wayne Gretzky',
+            choices: 'Bobby Orr, Mario Lemieux, or Wayne Gretzky',
+            points: 100,
+        },
+        {
+            question: 'This Team has the most Stanley Cups',
+            answer: 'Canadiens',
+            choices: 'Islanders, Oilers, or Canadiens',
+            points: 200,
+        },
+        {
+            question: 'This now defunct team called Atlanta home',
+            answer: 'Thrashers',
+            choices: 'Thrashers, Seals, or Whalers',
+            points: 300,
+        },
+        {
+            question: 'This amateur is still the only guy to ever take off his skate and try to stab somebody',
+            answer: 'Happy Gilmore',
+            choices: 'Ogie Ogilthorpe, Happy Gilmore, or Doug Glatt',
+            points: 400,
+        },
+        {
+            question: 'The last player to be win the Hart Trophy in the same season he was traded',
+            answer: 'Joe Thornton',
+            choices: 'Connor McDavid, Eric Lindros, or Joe Thornton',
+            points: 500,
+        }
+    ]
+
+    $('.hockeyHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(hockeyQuestions[0].question, `Type ${hockeyQuestions[0].choices}`);
+        if (y === hockeyQuestions[0].answer) {
+            alert('Correct!');
+            score += hockeyQuestions[0].points;
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect');
+            score -= hockeyQuestions[0].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.hockeyTwoHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(hockeyQuestions[1].question, `Type ${hockeyQuestions[1].choices}`);
+        if (y === hockeyQuestions[1].answer) {
+            alert('Correct!')
+            score += hockeyQuestions[1].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= hockeyQuestions[1].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.hockeyThreeHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(hockeyQuestions[2].question, `Type ${hockeyQuestions[2].choices}`);
+        if (y === hockeyQuestions[2].answer) {
+            alert('Correct!')
+            score += hockeyQuestions[2].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= hockeyQuestions[2].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.hockeyFourHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(hockeyQuestions[3].question, `Type ${hockeyQuestions[3].choices}`);
+        if (y === hockeyQuestions[3].answer) {
+            alert('Correct!')
+            score += hockeyQuestions[3].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= hockeyQuestions[3].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.hockeyFiveHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(hockeyQuestions[4].question, `Type ${hockeyQuestions[4].choices}`);
+        if (y === hockeyQuestions[4].answer) {
+            alert('Correct!')
+            score += hockeyQuestions[4].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= hockeyQuestions[4].points;
             $('.scoreUpdate').html(score);
         }
     });
