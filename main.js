@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('.newGame').click(function() {
+    $('.newGame').click(function () {
         location.reload();
     });
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
         }
     });
 
-//SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER
+    //SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER
 
     const soccerQuestions = [
         {
@@ -226,7 +226,7 @@ $(document).ready(function () {
         }
     });
 
-//SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
+    //SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
 
     const skiingQuestions = [
         {
@@ -442,6 +442,116 @@ $(document).ready(function () {
         else {
             alert('Incorrect')
             score -= hockeyQuestions[4].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    //FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL
+
+    const footballQuestions = [
+        {
+            question: 'The GOAT',
+            answer: 'Tom Brady',
+            choices: 'Peyton Manning, Tom Brady, or John Elway',
+            points: 100,
+        },
+        {
+            question: 'This Team has won the most Super Bowls',
+            answer: 'Steelers',
+            choices: 'Patriots, Cowboys, or Steelers',
+            points: 200,
+        },
+        {
+            question: 'This QB has the most Touchdown passes in NFL history',
+            answer: 'Peyton Manning',
+            choices: 'Tom Brady, Peyton Manning, or Brett Favre',
+            points: 300,
+        },
+        {
+            question: 'This RB has the most rushing yard in NFL history',
+            answer: 'Emmitt Smith',
+            choices: 'Walter Payton, Barry Sanders, or Emmitt Smith',
+            points: 400,
+        },
+        {
+            question: 'This WR has the most receiving yard in NFL history',
+            answer: 'Jerry Rice',
+            choices: 'Jerry Rice, Randy Moss, or Terrell Owens',
+            points: 500,
+        }
+    ]
+
+    $('.footballHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(footballQuestions[0].question, `Type ${footballQuestions[0].choices}`);
+        if (y === footballQuestions[0].answer) {
+            alert('Correct!');
+            score += footballQuestions[0].points;
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect');
+            score -= footballQuestions[0].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.footballTwoHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(footballQuestions[1].question, `Type ${footballQuestions[1].choices}`);
+        if (y === footballQuestions[1].answer) {
+            alert('Correct!')
+            score += footballQuestions[1].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= footballQuestions[1].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.footballThreeHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(footballQuestions[2].question, `Type ${footballQuestions[2].choices}`);
+        if (y === footballQuestions[2].answer) {
+            alert('Correct!')
+            score += footballQuestions[2].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= footballQuestions[2].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.footballFourHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(footballQuestions[3].question, `Type ${footballQuestions[3].choices}`);
+        if (y === footballQuestions[3].answer) {
+            alert('Correct!')
+            score += footballQuestions[3].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= footballQuestions[3].points;
+            $('.scoreUpdate').html(score);
+        }
+    });
+
+    $('.footballFiveHundred').on('click', function () {
+        $(this).addClass('disabled');
+        const y = prompt(footballQuestions[4].question, `Type ${footballQuestions[4].choices}`);
+        if (y === footballQuestions[4].answer) {
+            alert('Correct!')
+            score += footballQuestions[4].points
+            $('.scoreUpdate').html(score);
+        }
+        else {
+            alert('Incorrect')
+            score -= footballQuestions[4].points;
             $('.scoreUpdate').html(score);
         }
     });
