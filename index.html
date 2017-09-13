@@ -24,16 +24,26 @@
                 Click a category and value to play!
             </div>
 
-            <div class="btn col s3 push-s4">
+            <div class="btn col s3 push-s4 newGame">
                 New Game
             </div>
         </div>
         <div class="row center section categories">
-            <h5><div class="col s2 offset-s1">baseball</div></h5>
-            <h5><div class="col s2">soccer</div></h5>
-            <h5><div class="col s2">skiing</div></h5>
-            <h5><div class="col s2">hockey</div></h5>
-            <h5><div class="col s2">football</div></h5>
+            <h5>
+                <div class="col s2 offset-s1">baseball</div>
+            </h5>
+            <h5>
+                <div class="col s2">soccer</div>
+            </h5>
+            <h5>
+                <div class="col s2">skiing</div>
+            </h5>
+            <h5>
+                <div class="col s2">hockey</div>
+            </h5>
+            <h5>
+                <div class="col s2">football</div>
+            </h5>
         </div>
         <div class="row center section hundred">
             <div class="btn-large col s2 offset-s1 baseballHundred">100</div>
@@ -75,8 +85,9 @@
                 <i class="material-icons prefix">account_circle</i>
                 <input placeholder="Username">
             </div>
-            <div class="input-field col s3 push-s3">
-                <input placeholder="score">
+            <div id='scoreUpdate' class="input-field col s3 push-s3">
+                <h5>Score</h5>
+                <span class='scoreUpdate'>0</span>
             </div>
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

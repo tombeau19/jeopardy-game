@@ -1,5 +1,7 @@
 $(document).ready(function () {
-
+    $('.newGame').click(function() {
+        location.reload();
+    });
     const baseballQuestions = [
         {
             question: 'This team plays at Fenway Park',
@@ -31,16 +33,22 @@ $(document).ready(function () {
             choices: 'Carlos Beltran, Bill Mueller, Pete Rose, or Roberto Alomar',
             points: 500,
         }
-
     ]
+
+    let score = 0;
+
     $('.baseballHundred').on('click', function () {
         $(this).addClass('disabled');
         const y = prompt(baseballQuestions[0].question, `Type ${baseballQuestions[0].choices}`);
         if (y === baseballQuestions[0].answer) {
-            alert('Correct!')
+            alert('Correct!');
+            score += baseballQuestions[0].points;
+            $('.scoreUpdate').html(score);
         }
         else {
-            alert('Incorrect')
+            alert('Incorrect');
+            score -= baseballQuestions[0].points;
+            $('.scoreUpdate').html(score);
         }
     });
 
@@ -49,9 +57,13 @@ $(document).ready(function () {
         const y = prompt(baseballQuestions[1].question, `Type ${baseballQuestions[1].choices}`);
         if (y === baseballQuestions[1].answer) {
             alert('Correct!')
+            score += baseballQuestions[1].points
+            $('.scoreUpdate').html(score);
         }
         else {
             alert('Incorrect')
+            score -= baseballQuestions[1].points;
+            $('.scoreUpdate').html(score);
         }
     });
 
@@ -60,9 +72,13 @@ $(document).ready(function () {
         const y = prompt(baseballQuestions[2].question, `Type ${baseballQuestions[2].choices}`);
         if (y === baseballQuestions[2].answer) {
             alert('Correct!')
+            score += baseballQuestions[2].points
+            $('.scoreUpdate').html(score);
         }
         else {
             alert('Incorrect')
+            score -= baseballQuestions[2].points;
+            $('.scoreUpdate').html(score);
         }
     });
 
@@ -71,9 +87,13 @@ $(document).ready(function () {
         const y = prompt(baseballQuestions[3].question, `Type ${baseballQuestions[3].choices}`);
         if (y === baseballQuestions[3].answer) {
             alert('Correct!')
+            score += baseballQuestions[3].points
+            $('.scoreUpdate').html(score);
         }
         else {
             alert('Incorrect')
+            score -= baseballQuestions[3].points;
+            $('.scoreUpdate').html(score);
         }
     });
 
@@ -82,29 +102,13 @@ $(document).ready(function () {
         const y = prompt(baseballQuestions[4].question, `Type ${baseballQuestions[4].choices}`);
         if (y === baseballQuestions[4].answer) {
             alert('Correct!')
+            score += baseballQuestions[4].points
+            $('.scoreUpdate').html(score);
         }
         else {
             alert('Incorrect')
+            score -= baseballQuestions[4].points;
+            $('.scoreUpdate').html(score);
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
