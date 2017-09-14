@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     $('.newGame').click(function () {
         location.reload();
     });
@@ -40,82 +40,94 @@ $(document).ready(function () {
             points: 500,
         }
     ]
-
+    //BASEBALL HUNDRED
     $('.baseballHundred').on('click', function () {
         $(this).addClass('disabled');
-        $('.modal').modal();
-     });
+        $('.b100').modal();
+    });
 
-    $('.yesBaseball').on('click', function () {
+    $('.yesBaseball1').on('click', function () {
         alert('Correct!')
         score += baseballQuestions[0].points
         $('.scoreUpdate').html(score);
     });
 
-    $('.noBaseball').on('click', function (){
+    $('.noBaseball1').on('click', function () {
         alert('Incorrect')
         score -= baseballQuestions[0].points;
         $('.scoreUpdate').html(score);
     });
 
+    //BASEBALL TWO HUNDRED
     $('.baseballTwoHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(baseballQuestions[1].question, `Type ${baseballQuestions[1].choices}`);
-        if (y === baseballQuestions[1].answer) {
-            alert('Correct!')
-            score += baseballQuestions[1].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= baseballQuestions[1].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.b200').modal();
     });
 
+    $('.yesBaseball2').on('click', function () {
+        alert('Correct!')
+        score += baseballQuestions[1].points
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noBaseball2').on('click', function () {
+        alert('Incorrect')
+        score -= baseballQuestions[1].points;
+        $('.scoreUpdate').html(score);
+    });
+
+    //BASEBALL THREE HUNDRED
     $('.baseballThreeHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(baseballQuestions[2].question, `Type ${baseballQuestions[2].choices}`);
-        if (y === baseballQuestions[2].answer) {
-            alert('Correct!')
-            score += baseballQuestions[2].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= baseballQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.b300').modal();
     });
 
+    $('.yesBaseball3').on('click', function () {
+        alert('Correct!')
+        score += baseballQuestions[2].points
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noBaseball3').on('click', function () {
+        alert('Incorrect')
+        score -= baseballQuestions[2].points;
+        $('.scoreUpdate').html(score);
+    });
+
+    //BASEBALL FOUR HUNDRED
     $('.baseballFourHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(baseballQuestions[3].question, `Type ${baseballQuestions[3].choices}`);
-        if (y === baseballQuestions[3].answer) {
-            alert('Correct!')
-            score += baseballQuestions[3].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= baseballQuestions[3].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.b400').modal();
     });
 
+    $('.yesBaseball4').on('click', function () {
+        alert('Correct!')
+        score += baseballQuestions[3].points
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noBaseball4').on('click', function () {
+        alert('Incorrect')
+        score -= baseballQuestions[3].points;
+        $('.scoreUpdate').html(score);
+    });
+
+    //BASEBALL FIVE HUNDRED
     $('.baseballFiveHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(baseballQuestions[4].question, `Type ${baseballQuestions[4].choices}`);
-        if (y === baseballQuestions[4].answer) {
-            alert('Correct!')
-            score += baseballQuestions[4].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= baseballQuestions[4].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.b500').modal();
+    });
+
+    $('.yesBaseball5').on('click', function () {
+        alert('Correct!')
+        score += baseballQuestions[4].points
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noBaseball5').on('click', function () {
+        alert('Incorrect')
+        score -= baseballQuestions[4].points;
+        $('.scoreUpdate').html(score);
     });
 
     //SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER
