@@ -8,75 +8,21 @@ $(document).ready(function () {
 
     //BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL
 
-    const hundredQuestions = [
-        {
-            question: 'This team plays at Fenway Park',
-            answer: 'Red Sox',
-            choices: 'Yankees, Red Sox, Orioles, or Cubs',
-            category: 'baseball',
-        },
-        {
-            question: 'This team set the single game all time MLS attendance record',
-            answer: 'Atlanta United',
-            choices: 'Atlanta United, Seattle Sounders, Portland Timbers, or DC United',
-            categoy: 'soccer',
-        },
-        {
-            question: 'If you french fry when youre supposed to pizza you are gonna have a __________',
-            answer: 'Bad Time',
-            choices: 'Bad Time, Good Time, or Okay Time',
-            category: 'skiing',
-        },
-        {
-            question: 'The Great One',
-            answer: 'Wayne Gretzky',
-            choices: 'Bobby Orr, Mario Lemieux, or Wayne Gretzky',
-            category: 'hockey',
-        },
-        {
-            question: 'The GOAT',
-            answer: 'Tom Brady',
-            choices: 'Peyton Manning, Tom Brady, Joe Montanta, or John Elway',
-            category: 'football',
-        },
-    ]
     //BASEBALL HUNDRED
-    $('.hundred').children().on('click', function () {
+    $('.baseballHundred').on('click', function () {
         $(this).addClass('disabled');
-        for (let i = 0; i < hundredQuestions.length; i++) {
-            for (let j = 0; j < hundredQuestions[i].length; j++) {
-                if (hundredQuestions[i].category === 'baseball') {
-                    $('.baseballTwoHundred').on('click', function () {
-                        $(this).addClass('disabled');
-                        $('.b200').modal();
-                    });
-                
-                    $('.yesBaseball2').on('click', function () {
-                        alert('Correct!')
-                        score += baseballQuestions[1].points
-                        $('.scoreUpdate').html(score);
-                    });
-                
-                    $('.noBaseball2').on('click', function () {
-                        alert('Incorrect')
-                        score -= baseballQuestions[1].points;
-                        $('.scoreUpdate').html(score);
-                    });
-                }
-            }
-        }
-        
+        $('.b100').modal();
     });
 
     $('.yesBaseball1').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[0].points
+        score += 100
         $('.scoreUpdate').html(score);
     });
 
     $('.noBaseball1').on('click', function () {
         alert('Incorrect')
-        score -= baseballQuestions[0].points;
+        score -= 100;
         $('.scoreUpdate').html(score);
     });
 
@@ -88,13 +34,13 @@ $(document).ready(function () {
 
     $('.yesBaseball2').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[1].points
+        score += 200;
         $('.scoreUpdate').html(score);
     });
 
     $('.noBaseball2').on('click', function () {
         alert('Incorrect')
-        score -= baseballQuestions[1].points;
+        score -= 200;
         $('.scoreUpdate').html(score);
     });
 
@@ -106,13 +52,13 @@ $(document).ready(function () {
 
     $('.yesBaseball3').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[2].points
+        score += 300;
         $('.scoreUpdate').html(score);
     });
 
     $('.noBaseball3').on('click', function () {
         alert('Incorrect')
-        score -= baseballQuestions[2].points;
+        score -= 300
         $('.scoreUpdate').html(score);
     });
 
@@ -124,13 +70,13 @@ $(document).ready(function () {
 
     $('.yesBaseball4').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[3].points
+        score += 400;
         $('.scoreUpdate').html(score);
     });
 
     $('.noBaseball4').on('click', function () {
         alert('Incorrect')
-        score -= baseballQuestions[3].points;
+        score -= 400;
         $('.scoreUpdate').html(score);
     });
 
@@ -142,13 +88,13 @@ $(document).ready(function () {
 
     $('.yesBaseball5').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[4].points
+        score += 500;
         $('.scoreUpdate').html(score);
     });
 
     $('.noBaseball5').on('click', function () {
         alert('Incorrect')
-        score -= baseballQuestions[4].points;
+        score -= 500;
         $('.scoreUpdate').html(score);
     });
 
@@ -168,12 +114,6 @@ $(document).ready(function () {
             points: 400,
         },
         {
-            question: 'This team set the single game all time MLS attendance record',
-            answer: 'Atlanta United',
-            choices: 'Atlanta United, Seattle Sounders, Portland Timbers, or DC United',
-            points: 100,
-        },
-        {
             question: 'This player recently transferred to PSG for a record price',
             answer: 'Neymar',
             choices: 'Neymar, Messi, Ronaldo, or Tom Beauregard',
@@ -187,79 +127,94 @@ $(document).ready(function () {
         }
     ]
 
-    $('.soccerThreeHundred').on('click', function () {
-        $(this).addClass('disabled');
-        const y = prompt(soccerQuestions[0].question, `Type ${soccerQuestions[0].choices}`);
-        if (y === soccerQuestions[0].answer) {
-            alert('Correct!');
-            score += soccerQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect');
-            score -= soccerQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
-    });
-
-    $('.soccerFourHundred').on('click', function () {
-        $(this).addClass('disabled');
-        const y = prompt(soccerQuestions[1].question, `Type ${soccerQuestions[1].choices}`);
-        if (y === soccerQuestions[1].answer) {
-            alert('Correct!')
-            score += soccerQuestions[1].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= soccerQuestions[1].points;
-            $('.scoreUpdate').html(score);
-        }
-    });
-
+    //SOCCER HUNDRED
     $('.soccerHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(soccerQuestions[2].question, `Type ${soccerQuestions[2].choices}`);
-        if (y === soccerQuestions[2].answer) {
-            alert('Correct!')
-            score += soccerQuestions[2].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= soccerQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.s100').modal();
     });
 
+    $('.yesSoccer1').on('click', function () {
+        alert('Correct!')
+        score += 100
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSoccer1').on('click', function () {
+        alert('Incorrect')
+        score -= 100;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SOCCER TWO HUNDRED
     $('.soccerTwoHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(soccerQuestions[3].question, `Type ${soccerQuestions[3].choices}`);
-        if (y === soccerQuestions[3].answer) {
-            alert('Correct!')
-            score += soccerQuestions[3].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= soccerQuestions[3].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.s200').modal();
     });
 
+    $('.yesSoccer2').on('click', function () {
+        alert('Correct!')
+        score += 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSoccer2').on('click', function () {
+        alert('Incorrect')
+        score -= 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SOCCER THREE HUNDRED
+    $('.soccerThreeHundred').on('click', function () {
+        $(this).addClass('disabled');
+        $('.s300').modal();
+    });
+
+    $('.yesSoccer3').on('click', function () {
+        alert('Correct!')
+        score += 300;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSoccer3').on('click', function () {
+        alert('Incorrect')
+        score -= 300
+        $('.scoreUpdate').html(score);
+    });
+
+    //SOCCER FOUR HUNDRED
+    $('.soccerFourHundred').on('click', function () {
+        $(this).addClass('disabled');
+        $('.b400').modal();
+    });
+
+    $('.yesSoccer4').on('click', function () {
+        alert('Correct!')
+        score += 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSoccer4').on('click', function () {
+        alert('Incorrect')
+        score -= 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SOCCER FIVE HUNDRED
     $('.soccerFiveHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(soccerQuestions[4].question, `Type ${soccerQuestions[4].choices}`);
-        if (y === soccerQuestions[4].answer) {
-            alert('Correct!')
-            score += soccerQuestions[4].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= soccerQuestions[4].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.s500').modal();
+    });
+
+    $('.yesSoccer5').on('click', function () {
+        alert('Correct!')
+        score += 500;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSoccer5').on('click', function () {
+        alert('Incorrect')
+        score -= 500;
+        $('.scoreUpdate').html(score);
     });
 
     //SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
@@ -278,12 +233,6 @@ $(document).ready(function () {
             points: 200,
         },
         {
-            question: 'If you french fry when youre supposed to pizza you are gonna have a __________',
-            answer: 'Bad Time',
-            choices: 'Bad Time, Good Time, or Okay Time',
-            points: 100,
-        },
-        {
             question: 'First champion of the inaugural extreme skiing championships',
             answer: 'Doug Coombs',
             choices: 'Jonny Mosely, Shane McConkey, or Doug Coombs',
@@ -297,79 +246,94 @@ $(document).ready(function () {
         }
     ]
 
+    //SKIiNG HUNDRED
     $('.skiingHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(skiingQuestions[2].question, `Type ${skiingQuestions[2].choices}`);
-        if (y === skiingQuestions[2].answer) {
-            alert('Correct!');
-            score += skiingQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect');
-            score -= skiingQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.sk100').modal();
     });
 
+    $('.yesSkiing1').on('click', function () {
+        alert('Correct!')
+        score += 100
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSkiing1').on('click', function () {
+        alert('Incorrect')
+        score -= 100;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SKIING TWO HUNDRED
     $('.skiingTwoHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(skiingQuestions[1].question, `Type ${skiingQuestions[1].choices}`);
-        if (y === skiingQuestions[1].answer) {
-            alert('Correct!')
-            score += skiingQuestions[1].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= skiingQuestions[1].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.sk200').modal();
     });
 
+    $('.yesSkiing2').on('click', function () {
+        alert('Correct!')
+        score += 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSkiing2').on('click', function () {
+        alert('Incorrect')
+        score -= 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SKIING THREE HUNDRED
     $('.skiingThreeHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(skiingQuestions[0].question, `Type ${skiingQuestions[0].choices}`);
-        if (y === skiingQuestions[0].answer) {
-            alert('Correct!')
-            score += skiingQuestions[0].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= skiingQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.sk300').modal();
     });
 
+    $('.yesSkiing3').on('click', function () {
+        alert('Correct!')
+        score += 300;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSkiing3').on('click', function () {
+        alert('Incorrect')
+        score -= 300
+        $('.scoreUpdate').html(score);
+    });
+
+    //SKIING FOUR HUNDRED
     $('.skiingFourHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(skiingQuestions[3].question, `Type ${skiingQuestions[3].choices}`);
-        if (y === skiingQuestions[3].answer) {
-            alert('Correct!')
-            score += skiingQuestions[3].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= skiingQuestions[3].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.sk400').modal();
     });
 
+    $('.yesSkiing4').on('click', function () {
+        alert('Correct!')
+        score += 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSkiing4').on('click', function () {
+        alert('Incorrect')
+        score -= 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    //SKIING FIVE HUNDRED
     $('.skiingFiveHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(skiingQuestions[4].question, `Type ${skiingQuestions[4].choices}`);
-        if (y === skiingQuestions[4].answer) {
-            alert('Correct!')
-            score += skiingQuestions[4].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= skiingQuestions[4].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.sk500').modal();
+    });
+
+    $('.yesSkiing5').on('click', function () {
+        alert('Correct!')
+        score += 500;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noSkiing5').on('click', function () {
+        alert('Incorrect')
+        score -= 500;
+        $('.scoreUpdate').html(score);
     });
 
     //HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY
@@ -407,79 +371,94 @@ $(document).ready(function () {
         }
     ]
 
+    //HOCKEY HUNDRED
     $('.hockeyHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(hockeyQuestions[0].question, `Type ${hockeyQuestions[0].choices}`);
-        if (y === hockeyQuestions[0].answer) {
-            alert('Correct!');
-            score += hockeyQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect');
-            score -= hockeyQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.h100').modal();
     });
 
+    $('.yesHockey1').on('click', function () {
+        alert('Correct!')
+        score += 100
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noHockey1').on('click', function () {
+        alert('Incorrect')
+        score -= 100;
+        $('.scoreUpdate').html(score);
+    });
+
+    //HOCKEY TWO HUNDRED
     $('.hockeyTwoHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(hockeyQuestions[1].question, `Type ${hockeyQuestions[1].choices}`);
-        if (y === hockeyQuestions[1].answer) {
-            alert('Correct!')
-            score += hockeyQuestions[1].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= hockeyQuestions[1].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.h200').modal();
     });
 
+    $('.yesHockey2').on('click', function () {
+        alert('Correct!')
+        score += 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noHockey2').on('click', function () {
+        alert('Incorrect')
+        score -= 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    //HOCKEY THREE HUNDRED
     $('.hockeyThreeHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(hockeyQuestions[2].question, `Type ${hockeyQuestions[2].choices}`);
-        if (y === hockeyQuestions[2].answer) {
-            alert('Correct!')
-            score += hockeyQuestions[2].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= hockeyQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.h300').modal();
     });
 
+    $('.yesHockey3').on('click', function () {
+        alert('Correct!')
+        score += 300;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noHockey3').on('click', function () {
+        alert('Incorrect')
+        score -= 300
+        $('.scoreUpdate').html(score);
+    });
+
+    //HOCKEY FOUR HUNDRED
     $('.hockeyFourHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(hockeyQuestions[3].question, `Type ${hockeyQuestions[3].choices}`);
-        if (y === hockeyQuestions[3].answer) {
-            alert('Correct!')
-            score += hockeyQuestions[3].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= hockeyQuestions[3].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.h400').modal();
     });
 
+    $('.yesHockey4').on('click', function () {
+        alert('Correct!')
+        score += 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noHockey4').on('click', function () {
+        alert('Incorrect')
+        score -= 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    //HOCKEY FIVE HUNDRED
     $('.hockeyFiveHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(hockeyQuestions[4].question, `Type ${hockeyQuestions[4].choices}`);
-        if (y === hockeyQuestions[4].answer) {
-            alert('Correct!')
-            score += hockeyQuestions[4].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= hockeyQuestions[4].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.h500').modal();
+    });
+
+    $('.yesHockey5').on('click', function () {
+        alert('Correct!')
+        score += 500;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noHockey5').on('click', function () {
+        alert('Incorrect')
+        score -= 500;
+        $('.scoreUpdate').html(score);
     });
 
     //FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL
