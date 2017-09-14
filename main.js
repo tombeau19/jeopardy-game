@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     let score = 0;
 
+
     //BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL
 
     //BASEBALL HUNDRED
@@ -98,28 +99,8 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
-    //SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER
 
-    const soccerQuestions = [
-        {
-            question: 'Leads the United States Mens national team in all time goals scored',
-            answer: 'Clint Dempsey',
-            choices: 'Clint Dempsey, Jozy Altidore, Michael Bradley, or Cobi Jones',
-            points: 300,
-        },
-        {
-            question: 'Leads the United States Womens national team in all time goals scored',
-            answer: 'Abby Wambach',
-            choices: 'Mia Hamm, Abby Wambach, Carli Lloyd, or Kristine Lilly',
-            points: 400,
-        },
-        {
-            question: 'This country has won the most World Cup Titles',
-            answer: 'Brazil',
-            choices: 'Brazil, Italy, France, or Germany',
-            points: 500,
-        }
-    ]
+    //SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER SOCCER
 
     //SOCCER HUNDRED
     $('.soccerHundred').on('click', function () {
@@ -178,7 +159,7 @@ $(document).ready(function () {
     //SOCCER FOUR HUNDRED
     $('.soccerFourHundred').on('click', function () {
         $(this).addClass('disabled');
-        $('.b400').modal();
+        $('.s400').modal();
     });
 
     $('.yesSoccer4').on('click', function () {
@@ -211,28 +192,8 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
-    //SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
 
-    const skiingQuestions = [
-        {
-            question: 'Most World Cup wins for an American',
-            answer: 'Lindsay Vonn',
-            choices: 'Lindsay Vonn, Picaboo Street, or Mikaela Shiffrin',
-            points: 300,
-        },
-        {
-            question: 'First champion of the inaugural extreme skiing championships',
-            answer: 'Doug Coombs',
-            choices: 'Jonny Mosely, Shane McConkey, or Doug Coombs',
-            points: 400,
-        },
-        {
-            question: 'Inventor of the game GNAR',
-            answer: 'Shane McConkey',
-            choices: 'Shane McConkey, Jonny Mosely, or Doug Coombs',
-            points: 500,
-        }
-    ]
+    //SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING SKIING
 
     //SKIiNG HUNDRED
     $('.skiingHundred').on('click', function () {
@@ -324,28 +285,8 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
-    //HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY
 
-    const hockeyQuestions = [
-        {
-            question: 'This now defunct team called Atlanta home',
-            answer: 'Thrashers',
-            choices: 'Thrashers, Seals, or Whalers',
-            points: 300,
-        },
-        {
-            question: 'This amateur is still the only guy to ever take off his skate and try to stab somebody',
-            answer: 'Happy Gilmore',
-            choices: 'Ogie Ogilthorpe, Happy Gilmore, or Doug Glatt',
-            points: 400,
-        },
-        {
-            question: 'The last player to be win the Hart Trophy in the same season he was traded',
-            answer: 'Joe Thornton',
-            choices: 'Connor McDavid, Eric Lindros, or Joe Thornton',
-            points: 500,
-        }
-    ]
+    //HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY
 
     //HOCKEY HUNDRED
     $('.hockeyHundred').on('click', function () {
@@ -437,28 +378,8 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
+    
     //FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL
-
-    const footballQuestions = [
-        {
-            question: 'This QB has the most Touchdown passes in NFL history',
-            answer: 'Peyton Manning',
-            choices: 'Tom Brady, Peyton Manning, or Brett Favre',
-            points: 300,
-        },
-        {
-            question: 'This RB has the most rushing yard in NFL history',
-            answer: 'Emmitt Smith',
-            choices: 'Walter Payton, Barry Sanders, or Emmitt Smith',
-            points: 400,
-        },
-        {
-            question: 'This WR has the most receiving yard in NFL history',
-            answer: 'Jerry Rice',
-            choices: 'Jerry Rice, Randy Moss, or Terrell Owens',
-            points: 500,
-        }
-    ]
 
     //FOOTBALL HUNDRED
     $('.footballHundred').on('click', function () {
@@ -549,5 +470,4 @@ $(document).ready(function () {
         score -= 500;
         $('.scoreUpdate').html(score);
     });
-
 });
