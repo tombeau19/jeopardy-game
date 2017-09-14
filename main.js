@@ -46,7 +46,7 @@ $(document).ready(function () {
         $('.b100').modal();
     });
 
-    $('.yesBaseball1').on('click', function () {
+    $('.b100').find($('.yes')).on('click', function () {
         alert('Correct!')
         score += baseballQuestions[0].points
         $('.scoreUpdate').html(score);
