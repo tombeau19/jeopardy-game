@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    
     $('.newGame').click(function () {
         location.reload();
     });
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     $('.baseballHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(baseballQuestions[0].question, `Type ${baseballQuestions[0].choices}`);
+        $('.modal').modal();
         if (y === baseballQuestions[0].answer) {
             alert('Correct!');
             score += baseballQuestions[0].points;
