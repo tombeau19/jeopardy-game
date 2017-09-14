@@ -44,16 +44,18 @@ $(document).ready(function () {
     $('.baseballHundred').on('click', function () {
         $(this).addClass('disabled');
         $('.modal').modal();
-        if (y === baseballQuestions[0].answer) {
-            alert('Correct!');
-            score += baseballQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect');
-            score -= baseballQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
+     });
+
+    $('.yesBaseball').on('click', function () {
+        alert('Correct!')
+        score += baseballQuestions[0].points
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noBaseball').on('click', function (){
+        alert('Incorrect')
+        score -= baseballQuestions[0].points;
+        $('.scoreUpdate').html(score);
     });
 
     $('.baseballTwoHundred').on('click', function () {
