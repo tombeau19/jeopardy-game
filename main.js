@@ -470,4 +470,10 @@ $(document).ready(function () {
         score -= 500;
         $('.scoreUpdate').html(score);
     });
+
+    //FINAL FINAL FINAL FINAL FINAL FINAL FINAL FINAL FINAL FINAL FINAL
+    $('.finalIntro').on('click', function () {
+        $(this).addClass('disabled');
+        $('.final1').modal();
+    });
 });
