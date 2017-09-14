@@ -46,9 +46,9 @@ $(document).ready(function () {
         $('.b100').modal();
     });
 
-    $('.b100').find($('.yes')).on('click', function () {
+    $('.yesBaseball1').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[0].points
+        score += baseballQuestions[1].points
         $('.scoreUpdate').html(score);
     });
 
