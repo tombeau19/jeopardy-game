@@ -114,12 +114,6 @@ $(document).ready(function () {
             points: 400,
         },
         {
-            question: 'This player recently transferred to PSG for a record price',
-            answer: 'Neymar',
-            choices: 'Neymar, Messi, Ronaldo, or Tom Beauregard',
-            points: 200,
-        },
-        {
             question: 'This country has won the most World Cup Titles',
             answer: 'Brazil',
             choices: 'Brazil, Italy, France, or Germany',
@@ -225,12 +219,6 @@ $(document).ready(function () {
             answer: 'Lindsay Vonn',
             choices: 'Lindsay Vonn, Picaboo Street, or Mikaela Shiffrin',
             points: 300,
-        },
-        {
-            question: 'Most World Cup wins for an American man',
-            answer: 'Bode Miller',
-            choices: 'Ted Ligety, Bode Miller, or Phil Mahre',
-            points: 200,
         },
         {
             question: 'First champion of the inaugural extreme skiing championships',
@@ -339,18 +327,6 @@ $(document).ready(function () {
     //HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY HOCKEY
 
     const hockeyQuestions = [
-        {
-            question: 'The Great One',
-            answer: 'Wayne Gretzky',
-            choices: 'Bobby Orr, Mario Lemieux, or Wayne Gretzky',
-            points: 100,
-        },
-        {
-            question: 'This Team has the most Stanley Cups',
-            answer: 'Canadiens',
-            choices: 'Islanders, Oilers, or Canadiens',
-            points: 200,
-        },
         {
             question: 'This now defunct team called Atlanta home',
             answer: 'Thrashers',
@@ -465,18 +441,6 @@ $(document).ready(function () {
 
     const footballQuestions = [
         {
-            question: 'The GOAT',
-            answer: 'Tom Brady',
-            choices: 'Peyton Manning, Tom Brady, or John Elway',
-            points: 100,
-        },
-        {
-            question: 'This Team has won the most Super Bowls',
-            answer: 'Steelers',
-            choices: 'Patriots, Cowboys, or Steelers',
-            points: 200,
-        },
-        {
             question: 'This QB has the most Touchdown passes in NFL history',
             answer: 'Peyton Manning',
             choices: 'Tom Brady, Peyton Manning, or Brett Favre',
@@ -496,79 +460,94 @@ $(document).ready(function () {
         }
     ]
 
+    //FOOTBALL HUNDRED
     $('.footballHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(footballQuestions[0].question, `Type ${footballQuestions[0].choices}`);
-        if (y === footballQuestions[0].answer) {
-            alert('Correct!');
-            score += footballQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect');
-            score -= footballQuestions[0].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.f100').modal();
     });
 
+    $('.yesFootball1').on('click', function () {
+        alert('Correct!')
+        score += 100
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noFootball1').on('click', function () {
+        alert('Incorrect')
+        score -= 100;
+        $('.scoreUpdate').html(score);
+    });
+
+    //FOOTBALL TWO HUNDRED
     $('.footballTwoHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(footballQuestions[1].question, `Type ${footballQuestions[1].choices}`);
-        if (y === footballQuestions[1].answer) {
-            alert('Correct!')
-            score += footballQuestions[1].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= footballQuestions[1].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.f200').modal();
     });
 
+    $('.yesFootball2').on('click', function () {
+        alert('Correct!')
+        score += 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noFootball2').on('click', function () {
+        alert('Incorrect')
+        score -= 200;
+        $('.scoreUpdate').html(score);
+    });
+
+    //FOOTBALL THREE HUNDRED
     $('.footballThreeHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(footballQuestions[2].question, `Type ${footballQuestions[2].choices}`);
-        if (y === footballQuestions[2].answer) {
-            alert('Correct!')
-            score += footballQuestions[2].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= footballQuestions[2].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.f300').modal();
     });
 
+    $('.yesFootball3').on('click', function () {
+        alert('Correct!')
+        score += 300;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noFootball3').on('click', function () {
+        alert('Incorrect')
+        score -= 300
+        $('.scoreUpdate').html(score);
+    });
+
+    //FOOTBALL FOUR HUNDRED
     $('.footballFourHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(footballQuestions[3].question, `Type ${footballQuestions[3].choices}`);
-        if (y === footballQuestions[3].answer) {
-            alert('Correct!')
-            score += footballQuestions[3].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= footballQuestions[3].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.f400').modal();
     });
 
+    $('.yesFootball4').on('click', function () {
+        alert('Correct!')
+        score += 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noFootball4').on('click', function () {
+        alert('Incorrect')
+        score -= 400;
+        $('.scoreUpdate').html(score);
+    });
+
+    //FOOTBALL FIVE HUNDRED
     $('.footballFiveHundred').on('click', function () {
         $(this).addClass('disabled');
-        const y = prompt(footballQuestions[4].question, `Type ${footballQuestions[4].choices}`);
-        if (y === footballQuestions[4].answer) {
-            alert('Correct!')
-            score += footballQuestions[4].points
-            $('.scoreUpdate').html(score);
-        }
-        else {
-            alert('Incorrect')
-            score -= footballQuestions[4].points;
-            $('.scoreUpdate').html(score);
-        }
+        $('.f500').modal();
+    });
+
+    $('.yesFootball5').on('click', function () {
+        alert('Correct!')
+        score += 500;
+        $('.scoreUpdate').html(score);
+    });
+
+    $('.noFootball5').on('click', function () {
+        alert('Incorrect')
+        score -= 500;
+        $('.scoreUpdate').html(score);
     });
 
 });
