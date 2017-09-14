@@ -8,42 +8,64 @@ $(document).ready(function () {
 
     //BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL BASEBALL
 
-    const baseballQuestions = [
+    const hundredQuestions = [
         {
             question: 'This team plays at Fenway Park',
             answer: 'Red Sox',
             choices: 'Yankees, Red Sox, Orioles, or Cubs',
-            points: 100,
+            category: 'baseball',
         },
         {
-            question: 'This team has won the most World Series',
-            answer: 'Yankees',
-            choices: 'Yankees, Dodgers, Giants, or Braves',
-            points: 200,
+            question: 'This team set the single game all time MLS attendance record',
+            answer: 'Atlanta United',
+            choices: 'Atlanta United, Seattle Sounders, Portland Timbers, or DC United',
+            categoy: 'soccer',
         },
         {
-            question: 'Before Barry Bonds cheated and broke his record, This player had the most career Home Runs',
-            answer: 'Hank Aaron',
-            choices: 'Babe Ruth, Roger Marris, Ted Williams, or Hank Aaron',
-            points: 300,
+            question: 'If you french fry when youre supposed to pizza you are gonna have a __________',
+            answer: 'Bad Time',
+            choices: 'Bad Time, Good Time, or Okay Time',
+            category: 'skiing',
         },
         {
-            question: 'This player claims to have been drunk when he threw a perfect game',
-            answer: 'David Wells',
-            choices: 'David Cone, Roger Clemens, David Wells, or Oil Can Boyd',
-            points: 400,
+            question: 'The Great One',
+            answer: 'Wayne Gretzky',
+            choices: 'Bobby Orr, Mario Lemieux, or Wayne Gretzky',
+            category: 'hockey',
         },
         {
-            question: 'The most recent switch hitter to hit a grand slam from both sides of the plate in the same game',
-            answer: 'Bill Mueller',
-            choices: 'Carlos Beltran, Bill Mueller, Pete Rose, or Roberto Alomar',
-            points: 500,
-        }
+            question: 'The GOAT',
+            answer: 'Tom Brady',
+            choices: 'Peyton Manning, Tom Brady, Joe Montanta, or John Elway',
+            category: 'football',
+        },
     ]
     //BASEBALL HUNDRED
-    $('.baseballHundred').on('click', function () {
+    $('.hundred').children().on('click', function () {
         $(this).addClass('disabled');
-        $('.b100').modal();
+        for (let i = 0; i < hundredQuestions.length; i++) {
+            for (let j = 0; j < hundredQuestions[i].length; j++) {
+                if (hundredQuestions[i].category === 'baseball') {
+                    $('.baseballTwoHundred').on('click', function () {
+                        $(this).addClass('disabled');
+                        $('.b200').modal();
+                    });
+                
+                    $('.yesBaseball2').on('click', function () {
+                        alert('Correct!')
+                        score += baseballQuestions[1].points
+                        $('.scoreUpdate').html(score);
+                    });
+                
+                    $('.noBaseball2').on('click', function () {
+                        alert('Incorrect')
+                        score -= baseballQuestions[1].points;
+                        $('.scoreUpdate').html(score);
+                    });
+                }
+            }
+        }
+        
     });
 
     $('.yesBaseball1').on('click', function () {
