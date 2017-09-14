@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     $('.yesBaseball1').on('click', function () {
         alert('Correct!')
-        score += baseballQuestions[1].points
+        score += baseballQuestions[0].points
         $('.scoreUpdate').html(score);
     });
 
