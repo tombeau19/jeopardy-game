@@ -487,8 +487,8 @@ $(document).ready(function () {
             alert('over your max - you loose for cheating');
             location.reload();
         }
-        else if (x >= 0 && x <= score) {
-            $('#modal27').modal('open');
+        else if (x > 0 && x <= score) {
+            $('.final2').modal('open');
         }
         
     });
