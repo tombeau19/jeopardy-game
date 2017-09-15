@@ -477,10 +477,19 @@ $(document).ready(function () {
     });
 
     $('.wager').on('click', function() {
-        let y = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
-        let x = parseInt(y);
-        if (x > score) {
-            alert('cheater - you loose');
-        };
+        const y = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
+        const x = parseInt(y);
+        if (score <= 0) {
+            alert('Game Over, you have nothing to wager')
+            location.reload();
+        }
+        else if (x > score) {
+            alert('over your max - you loose for cheating');
+            location.reload();
+        }
+        else if (x >= 0 && x <= score) {
+            $('#modal27').modal('open');
+        }
+        
     });
 });
