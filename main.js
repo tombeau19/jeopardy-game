@@ -479,7 +479,11 @@ $(document).ready(function () {
     $('.wager').on('click', function () {
         const y = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
         const x = parseInt(y);
-        if (score <= 0) {
+        if (x !== x || x === ' ') {
+            alert(`please enter a number`)
+            $('.finalIntro').removeClass('disabled');
+        }
+        else if (score <= 0) {
             alert('Game Over, you have nothing to wager')
             location.reload();
         }
@@ -493,7 +497,7 @@ $(document).ready(function () {
         $('.yesFinal').on('click', function () {
             alert('Correct!')
             score += x;
-            $('.addFinal').html(`FINAL SCORE = ${score}`)
+            $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
         });
 
         $('.noFinal').on('click', function () {
