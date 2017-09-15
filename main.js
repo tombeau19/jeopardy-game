@@ -484,9 +484,9 @@ $(document).ready(function () {
             location.reload();
         }
         else if (x > score) {
-            alert('over your max - you loose for cheating');
-            location.reload();
-        }
+            alert('over your max - try again');
+            $('.finalIntro').removeClass('disabled');
+            }
         else if (x > 0 && x <= score) {
             $('.final2').modal('open');
         }
