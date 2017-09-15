@@ -475,4 +475,8 @@ $(document).ready(function () {
         $(this).addClass('disabled');
         $('.final1').modal();
     });
+
+    $('.wager').on('click', function() {
+        prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score}`);
+    })
 });
