@@ -488,5 +488,18 @@ $(document).ready(function () {
             $('.finalIntro').removeClass('disabled');
         }
         $('.final2').modal();
+        $('.yesFinal').on('click', function () {
+            alert('Correct!')
+            score += x;
+            $('.scoreUpdate').html(score);
+        });
+    
+        $('.noFinal').on('click', function () {
+            alert('Incorrect')
+            score -= x;
+            $('.scoreUpdate').html(score);
+        });
     });
+
+    
 });
