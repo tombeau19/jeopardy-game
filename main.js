@@ -377,7 +377,7 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
-    
+
     //FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL FOOTBALL
 
     //FOOTBALL HUNDRED
@@ -476,7 +476,7 @@ $(document).ready(function () {
         $('.final1').modal();
     });
 
-    $('.wager').on('click', function() {
+    $('.wager').on('click', function () {
         const y = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
         const x = parseInt(y);
         if (score <= 0) {
@@ -486,10 +486,7 @@ $(document).ready(function () {
         else if (x > score) {
             alert('over your max - try again');
             $('.finalIntro').removeClass('disabled');
-            }
-        else if (x > 0 && x <= score) {
-            $('.final2').modal('open');
         }
-        
+        $('.final2').modal();
     });
 });
