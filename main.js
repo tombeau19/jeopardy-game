@@ -487,19 +487,21 @@ $(document).ready(function () {
             alert('over your max - try again');
             $('.finalIntro').removeClass('disabled');
         }
+
         $('.final2').modal();
+
         $('.yesFinal').on('click', function () {
             alert('Correct!')
             score += x;
-            $('.scoreUpdate').html(score);
+            $('.addFinal').html(`FINAL SCORE = ${score}`)
         });
-    
+
         $('.noFinal').on('click', function () {
             alert('Incorrect')
             score -= x;
-            $('.scoreUpdate').html(score);
+            $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
         });
     });
 
-    
+
 });
