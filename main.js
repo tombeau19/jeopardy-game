@@ -477,6 +477,10 @@ $(document).ready(function () {
     });
 
     $('.wager').on('click', function() {
-        prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score}`);
-    })
+        let y = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
+        let x = parseInt(y);
+        if (x > score) {
+            alert('cheater - you loose');
+        };
+    });
 });
