@@ -487,7 +487,7 @@ $(document).ready(function () {
             alert('over your max - try again');
             $('.finalIntro').removeClass('disabled');
         }
-
+        else if (x > 0 && x <= score) {
         $('.final2').modal();
 
         $('.yesFinal').on('click', function () {
@@ -501,6 +501,7 @@ $(document).ready(function () {
             score -= x;
             $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
         });
+    }
     });
 
 
