@@ -323,22 +323,53 @@ $(document).ready(function () {
         $('.scoreUpdate').html(score);
     });
 
-    //HOCKEY THREE HUNDRED
+    //HOCKEY THREE HUNDRED DAILEY DOUBLE HOCKEY THREE HUNDRED DAILEY DOUBLE HOCKEY THREE HUNDRED DAILEY DOUBLE HOCKEY THREE HUNDRED DAILEY DOUBLE
     $('.hockeyThreeHundred').on('click', function () {
         $(this).addClass('disabled');
-        $('.h300').modal();
+        $('.dailyDouble').modal();
     });
 
-    $('.yesHockey3').on('click', function () {
-        alert('Correct!')
-        score += 300;
-        $('.scoreUpdate').html(score);
-    });
+    $('.dailyDub').on('click', function () {
+        const a = prompt('Fortune favors the bold, now...SUBMIT YOUR WAGER', `your maximum wager is $${score} (only type the number)`);
+        const b = parseInt(a);
+        if (b !== b || b === ' ') {
+            alert(`please enter a number`)
+            $('.hockeyThreeHundred').removeClass('disabled');
+        }
+        else if (score <= 0) {
+            $('.h300').modal();
 
-    $('.noHockey3').on('click', function () {
-        alert('Incorrect')
-        score -= 300
-        $('.scoreUpdate').html(score);
+            $('.yesHockey3').on('click', function () {
+                alert('Correct!')
+                score += 300;
+                $('.scoreUpdate').html(score);
+            });
+
+            $('.noHockey3').on('click', function () {
+                alert('Incorrect')
+                score -= 300;
+                $('.scoreUpdate').html(score);
+            });
+        }
+        else if (b > score) {
+            alert('over your max - try again');
+            $('.hockeyThreeHundred').removeClass('disabled');
+        }
+        else if (b > 0 && b <= score) {
+            $('.h300').modal();
+
+            $('.yesHockey3').on('click', function () {
+                alert('Correct!')
+                score += b;
+                $('.scoreUpdate').html(score);
+            });
+
+            $('.noHockey3').on('click', function () {
+                alert('Incorrect')
+                score -= b;
+                $('.scoreUpdate').html(score);
+            });
+        }
     });
 
     //HOCKEY FOUR HUNDRED
@@ -492,20 +523,20 @@ $(document).ready(function () {
             $('.finalIntro').removeClass('disabled');
         }
         else if (x > 0 && x <= score) {
-        $('.final2').modal();
+            $('.final2').modal();
 
-        $('.yesFinal').on('click', function () {
-            alert('Correct!')
-            score += x;
-            $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
-        });
+            $('.yesFinal').on('click', function () {
+                alert('Correct!')
+                score += x;
+                $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
+            });
 
-        $('.noFinal').on('click', function () {
-            alert('Incorrect')
-            score -= x;
-            $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
-        });
-    }
+            $('.noFinal').on('click', function () {
+                alert('Incorrect')
+                score -= x;
+                $('.addFinal').addClass('red-text').html(`FINAL SCORE = ${score}`)
+            });
+        }
     });
 
 
